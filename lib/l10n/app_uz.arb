@@ -1,0 +1,23 @@
+{
+    "language": "O'zbek",
+    "bmiCalc": "TMI Hisoblagichi",
+    "what": "TMI nima?",
+    "bodyMassIndex": "Tana Massa Indeksi Kalkulyatori. Tana massasi indeksini aniqlashga va kam vazn, normal, ortiqcha vazn yoki semirib ketganligingizni aniqlashga yordam beradi.",
+    "male": "Erkak",
+    "female": "Ayol",
+    "height": "Bo'y",
+    "cm": "sm",
+    "weight": "O'g'irlik",
+    "kg": "kg",
+    "age": "Yosh",
+    "calculate": "Hisoblash",
+    "reCalculate": "Qayta-Hisoblash",
+    "yourResult": "Natijangiz",
+    "yourbmi": "Sizning TMI natijangiz",
+    "overweight": "Ortiqcha vazn",
+    "normal": "Normal",
+    "underweight": "Kam vazn",
+    "overText": "Sizda normal tana vaznidan yuqori. Agar sizda ortiqcha vazn bo'lsa, vazn yo'qotishning eng yaxshi usuli bu parhez va jismoniy mashqlar kombinatsiyasi.",
+    "normalText": "Sizning tana vazningiz normal. O'zingizni yaxshi saqlashda davom eting!",
+    "underText": "Sizning tana vazningizdan normadan pastroq. Kam vazn, siz etarlicha ovqatlanmayotganingiz yoki kasal bo'lishingiz mumkin bo'lgan belgi bo'lishi mumkin. Siz bir oz ko'proq eyishingiz mumkin."
+}

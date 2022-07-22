@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../constants.dart';
 import '../components/reusable_card.dart';
@@ -17,20 +19,34 @@ class ResultsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
-      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Expanded(
             child: Container(
-              padding: EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(15.0),
+              margin: EdgeInsets.only(top: 20.0),
               alignment: Alignment.bottomLeft,
-              child: Text(
-                'Your Result',
-                style: kTitleTextStyle,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Text(
+                    AppLocalizations.of(context)!.yourResult,
+                    style: kTitleTextStyle,
+                  ),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: Icon(
+                      FontAwesomeIcons.calculator,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
@@ -43,24 +59,38 @@ class ResultsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    resultText.toUpperCase(),
+                    AppLocalizations.of(context)!.yourbmi,
+                    //resultText.toUpperCase(),
                     style: kResultTextStyle,
                   ),
-                  Text(
-                    bmiResult,
-                    style: kBMITextStyle,
+                  Column(
+                    children: [
+                      Text(
+                        bmiResult,
+                        style: kBMITextStyle,
+                      ),
+                      Text(
+                        '($resultText)',
+                        style: kBodyTextStyle,
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
                   ),
                   Text(
                     interpretation,
                     textAlign: TextAlign.center,
-                    style: kBodyTextStyle,
+                    style: TextStyle(
+                      color: Color(0xFF0F163B),
+                      fontSize: 22.0,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ],
               ),
             ),
           ),
           BottomButton(
-            buttonTitle: 'RE-CALCULATE',
+            buttonTitle: AppLocalizations.of(context)!.reCalculate,
             onTap: () {
               Navigator.pop(context);
             },
