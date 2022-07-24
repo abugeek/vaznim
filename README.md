@@ -1,16 +1,17 @@
 # vaznim
 
-A new Flutter project.
+VAZNIM APP
 
-## Getting Started
+With this app you can easily get your BMI results and you will also get some suggestions to imporve your health.
+
+## VAZNIM APP review:
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+![screen-20220725-001330](https://user-images.githubusercontent.com/70211629/180662881-661ec666-936a-40f8-9e46-b55606aec9fe.gif)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Known bugs:
+
+ * It has problems with responsivnes(as usual) 🙄
+ * Problem with name of app. Because, I just took random word in Uzbek. In the future I wanna publish it to stores that's why I also need to look seriously about the name and design. If you have any suggestions then just let me know 😀
