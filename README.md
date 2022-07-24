@@ -6,8 +6,6 @@ With this app you can easily get your BMI results and you will also get some sug
 
 ## VAZNIM APP review:
 
-This project is a starting point for a Flutter application.
-
 ![screen-20220725-001330](https://user-images.githubusercontent.com/70211629/180662881-661ec666-936a-40f8-9e46-b55606aec9fe.gif)
 
 
