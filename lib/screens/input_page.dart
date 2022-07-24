@@ -227,7 +227,7 @@ class _InputPageState extends State<InputPage> {
                   SliderTheme(
                     data: SliderTheme.of(context).copyWith(
                       inactiveTrackColor: const Color(0xFF8D8E98),
-                      activeTrackColor: const Color(0xFF4E7AF3),
+                      activeTrackColor: mainBlue,
                       thumbColor: const Color(0xFFEB1555),
                       overlayColor: const Color(0x29EB1555),
                       thumbShape:
@@ -262,44 +262,6 @@ class _InputPageState extends State<InputPage> {
                     },
                   ),
                 ),
-                /* Expanded(
-                  child: ReusableCard(
-                    colour: kActiveCardColour,
-                    cardChild: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        CardTitle("Weight Counter", subtitle: "(kg)"),
-                        Text(
-                          weight.toString(),
-                          style: kNumberTextStyle,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            RoundIconButton(
-                                icon: FontAwesomeIcons.minus,
-                                onPressed: () {
-                                  setState(() {
-                                    weight--;
-                                  });
-                                }),
-                            const SizedBox(
-                              width: 10.0,
-                            ),
-                            RoundIconButton(
-                              icon: FontAwesomeIcons.plus,
-                              onPressed: () {
-                                setState(() {
-                                  weight++;
-                                });
-                              },
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ), */
                 Expanded(
                   child: ReusableCard(
                     colour: kActiveCardColour,

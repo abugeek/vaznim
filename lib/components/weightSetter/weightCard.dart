@@ -20,7 +20,7 @@ class WeightCard extends StatefulWidget {
   State<WeightCard> createState() => _WeightCardState();
 }
 
-final Offset offset = const Offset(4, 4);
+const Offset offset = Offset(4, 4);
 
 class _WeightCardState extends State<WeightCard> {
   @override
@@ -35,9 +35,9 @@ class _WeightCardState extends State<WeightCard> {
             blurRadius: 15,
             spreadRadius: 1,
           ),
-          BoxShadow(
+          const BoxShadow(
             color: Colors.white,
-            offset: -offset,
+            //offset: -offset,
             blurRadius: 15,
             spreadRadius: 1,
           ),
@@ -105,7 +105,7 @@ class WeightBackground extends StatelessWidget {
         Container(
           height: screenAwareSize(100.0, context),
           decoration: BoxDecoration(
-            color: Color.fromRGBO(244, 244, 244, 1.0),
+            color: const Color.fromRGBO(244, 244, 244, 1.0),
             borderRadius: BorderRadius.circular(screenAwareSize(50.0, context)),
           ),
           child: child,

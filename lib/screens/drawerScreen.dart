@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:vaznim/screens/info_page.dart';
 
+import './faqPage.dart';
+import '../constants.dart';
+import '../screens/faqPage.dart';
 import '../components/langChooser.dart';
 
 class DrawerScreen extends StatefulWidget {
@@ -20,7 +22,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(top: 60, bottom: 40, left: 15),
-      color: const Color(0xFF4E7AF3),
+      color: mainBlue,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -106,7 +108,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 context,
                 PageTransition(
                   type: PageTransitionType.fade,
-                  child: const InfoPage(),
+                  child: faqPage(),
                 ),
               ),
               child: Row(
