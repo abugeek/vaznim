@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import './screens/drawerScreen.dart';
-import './screens/input_page.dart';
+import 'src/screens/drawer_screen.dart';
+import 'src/screens/input_page.dart';
 
 void main() => runApp(HomePage());
 

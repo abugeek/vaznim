@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgetUtils.dart';
+import '../utils/widget_utils.dart';
 
 const TextStyle _titleStyle = TextStyle(
   fontSize: 16.0,
