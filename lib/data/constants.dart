@@ -5,6 +5,7 @@ final kActiveCardColor = Colors.grey.shade100;
 final kInactiveCardColor = Colors.grey.shade400;
 const textColorDarkBlue = Color(0xFF0F163B);
 const mainBlue = Color(0xFF4E7AF3);
+//const kBottomContainerColour = Color(0xFFEB1555);
 
 const kLabelTextStyle = TextStyle(
   fontSize: 18.0,
