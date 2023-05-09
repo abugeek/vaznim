@@ -11,7 +11,7 @@
     "age": "Age",
     "calculate": "Calculate",
     "reCalculate": "Re-Calculate",
-    "yourResult": "Your Result",
+    "yourResult": "Result",
     "yourbmi": "Your BMI is",
     "overweight": "Overweight",
     "normal": "Normal",
@@ -20,12 +20,12 @@
     "normalText": "You have a normal body weight. Keep up the good work!",
     "underText": "You have a lower than normal body weight. Being underweight could be a sign you're not eating enough or you may be ill. You can eat a bit more.",
 
-    "firstQ": "What is the BMI?",
-    "firstA": "BMI is an acronym for Body Mass Index, and it is an indicator of the amount of fat which is stored in the human body. It provides a measure of the appropriateness of your weight to your height, based on health issues which are known to arise as a result of having a BMI which is too low or too high.",
-    "secondQ": "How is BMI calculated?",
-    "secondA": "BMI is calculated using only the variables of weight and height. Your BMI is equal to your weight in kilograms divided by your height in metres squared.",
-    "thirdQ": "What is the ideal BMI?",
-    "thirdA": "The ideal BMI is between 18.5 and 25 kg/m2. This is the range of body weight which is normal for a healthy person. If your BMI is outside this range, you may be underweight or overweight.",
-    "fourthQ": "Is BMI officially recognised?",
-    "fourthA": "Yes, BMI is officially recognised by the World Health Organisation, and it is endorsed by a wide range of government agencies and medical organisations throughout the world. This official recognition has led to BMI being used extensively in both the public and private sectors in all developed countries."
+    "q1": "What is the BMI?",
+    "a1": "BMI is an acronym for Body Mass Index, and it is an indicator of the amount of fat which is stored in the human body. It provides a measure of the appropriateness of your weight to your height, based on health issues which are known to arise as a result of having a BMI which is too low or too high.",
+    "q2": "How is BMI calculated?",
+    "a2": "BMI is calculated using only the variables of weight and height. Your BMI is equal to your weight in kilograms divided by your height in metres squared.",
+    "q3": "What is the ideal BMI?",
+    "a3": "The ideal BMI is between 18.5 and 25 kg/m2. This is the range of body weight which is normal for a healthy person. If your BMI is outside this range, you may be underweight or overweight.",
+    "q4": "Is BMI officially recognised?",
+    "a4": "Yes, BMI is officially recognised by the World Health Organisation, and it is endorsed by a wide range of government agencies and medical organisations throughout the world. This official recognition has led to BMI being used extensively in both the public and private sectors in all developed countries."
 }

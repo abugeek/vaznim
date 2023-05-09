@@ -5,7 +5,6 @@ import 'package:page_transition/page_transition.dart';
 
 import 'faq_page.dart';
 import '../../data/constants.dart';
-import 'faq_page.dart';
 import '../widgets/lang_picker.dart';
 
 class DrawerScreen extends StatefulWidget {
@@ -102,13 +101,13 @@ class _DrawerScreenState extends State<DrawerScreen> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 10),
+            padding: const EdgeInsets.only(left: 10),
             child: InkWell(
               onTap: () => Navigator.push(
                 context,
                 PageTransition(
                   type: PageTransitionType.fade,
-                  child: faqPage(),
+                  child: const faqPage(),
                 ),
               ),
               child: Row(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../screens/drawer_screen.dart';
+import '../screens/drawer_page.dart';
 
 class langChooser extends StatelessWidget {
   const langChooser({

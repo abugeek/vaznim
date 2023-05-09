@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:vaznim/data/constants.dart';
+import 'package:vaznim/src/widgets/divider_widget.dart';
 
 import '../utils/widget_utils.dart';
 
 const TextStyle _titleStyle = TextStyle(
   fontSize: 16.0,
   fontWeight: FontWeight.w600,
-  color: Color.fromRGBO(14, 24, 35, 1.0),
+  color: textColorDarkBlue,
 );
 
 const TextStyle _subtitleStyle = TextStyle(
@@ -45,10 +47,7 @@ class CardTitle extends StatelessWidget {
             ],
           ),
         ),
-        const Divider(
-          height: 1.0,
-          color: Color.fromRGBO(143, 144, 156, 0.22),
-        ),
+        const DividerWidget(),
       ],
     );
   }

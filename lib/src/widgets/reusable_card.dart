@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vaznim/data/constants.dart';
 
 class ReusableCard extends StatelessWidget {
   ReusableCard({required this.colour, this.cardChild, this.onPress});
@@ -13,26 +14,26 @@ class ReusableCard extends StatelessWidget {
     return GestureDetector(
       onTap: onPress,
       child: Container(
-        child: cardChild,
-        margin: EdgeInsets.all(10.0),
+        margin: const EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           color: colour,
-          borderRadius: BorderRadius.circular(20.0),
+          borderRadius: kBorderRadius,
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.shade600,
+              color: boxShadow1,
               offset: offset,
               blurRadius: 15,
               spreadRadius: 1,
             ),
             BoxShadow(
-              color: Colors.white,
+              color: boxShadow2,
               offset: -offset,
               blurRadius: 15,
               spreadRadius: 1,
             ),
           ],
         ),
+        child: cardChild,
       ),
     );
   }
