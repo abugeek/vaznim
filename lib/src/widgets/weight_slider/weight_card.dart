@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:vaznim/data/constants.dart';
 
 import '../card_title.dart';
 import '../../utils/widget_utils.dart';
@@ -20,24 +21,24 @@ class WeightCard extends StatefulWidget {
   State<WeightCard> createState() => _WeightCardState();
 }
 
-const Offset offset = Offset(4, 4);
+const Offset offset = Offset(1, 2.5);
 
 class _WeightCardState extends State<WeightCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.0),
+        borderRadius: kBorderRadius,
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.shade500,
+            color: boxShadow1,
             offset: offset,
             blurRadius: 15,
             spreadRadius: 1,
           ),
-          const BoxShadow(
-            color: Colors.white,
-            //offset: -offset,
+          BoxShadow(
+            color: boxShadow2,
+            offset: -offset,
             blurRadius: 15,
             spreadRadius: 1,
           ),
@@ -45,7 +46,7 @@ class _WeightCardState extends State<WeightCard> {
       ),
       child: Card(
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20.0),
+          borderRadius: kBorderRadius,
         ),
         margin: EdgeInsets.only(
           left: screenAwareSize(10.0, context),
@@ -56,8 +57,10 @@ class _WeightCardState extends State<WeightCard> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            CardTitle(AppLocalizations.of(context)!.weight,
-                subtitle: AppLocalizations.of(context)!.kg),
+            CardTitle(
+              AppLocalizations.of(context)!.weight,
+              subtitle: AppLocalizations.of(context)!.kg,
+            ),
             Expanded(
               child: Center(
                 child: Padding(
@@ -83,7 +86,11 @@ class _WeightCardState extends State<WeightCard> {
                   minValue: 30,
                   maxValue: 150,
                   value: widget.weight,
-                  onChanged: (val) => widget.onChanged(val),
+                  onChanged: (value) {
+                    setState(() {
+                      widget.onChanged(value);
+                    });
+                  },
                   width: constraints.maxWidth,
                 );
         },
@@ -105,13 +112,14 @@ class WeightBackground extends StatelessWidget {
         Container(
           height: screenAwareSize(100.0, context),
           decoration: BoxDecoration(
-            color: const Color.fromRGBO(244, 244, 244, 1.0),
+            color: weightCardBackColor,
             borderRadius: BorderRadius.circular(screenAwareSize(50.0, context)),
           ),
           child: child,
         ),
         SvgPicture.asset(
           "images/weight_arrow.svg",
+          color: mainBlue,
           height: screenAwareSize(10.0, context),
           width: screenAwareSize(18.0, context),
         ),

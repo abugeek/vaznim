@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import '../widgets/bmi_brand.dart';
+import '../widgets/divider_widget.dart';
 import '../widgets/icon_content.dart';
 import '../widgets/reusable_card.dart';
 import '../widgets/weight_slider/weight_card.dart';
@@ -43,15 +46,15 @@ class _InputPageState extends State<InputPage> {
       transform: Matrix4.identity()
         ..translate(xOffset, yOffset)
         ..scale(scaleFactor)
-        ..rotateY(isDrawerOpen ? 0.7 : 0),
-      duration: const Duration(milliseconds: 250),
+        ..rotateY(isDrawerOpen ? 0.1 : 0),
+      duration: const Duration(milliseconds: 300),
       decoration: BoxDecoration(
         color: Colors.grey.shade200,
-        borderRadius: BorderRadius.circular(isDrawerOpen ? 40 : 0),
+        borderRadius: BorderRadius.circular(isDrawerOpen ? 36.r : 0),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.shade300,
-            blurRadius: 10,
+            color: drawerBlur,
+            blurRadius: 5.r,
             //offset: const Offset(0, 10),
           ),
         ],
@@ -59,10 +62,8 @@ class _InputPageState extends State<InputPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          const SizedBox(height: 40),
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 20),
-            padding: const EdgeInsets.only(bottom: 10),
+            margin: EdgeInsets.only(left: 10.w, right: 10.w, top: 40.h),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -84,54 +85,16 @@ class _InputPageState extends State<InputPage> {
                         onPressed: () {
                           setState(() {
                             isDrawerOpen = true;
-                            xOffset = 230;
-                            yOffset = 150;
-                            scaleFactor = 0.65;
+                            xOffset = 195;
+                            yOffset = 180;
+                            scaleFactor = 0.9;
                           });
                         },
                         icon: const Icon(
                           Icons.menu,
                         ),
                       ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    //const Text('BMI Calculator'),
-                    Row(
-                      children: [
-                        const CircleAvatar(
-                          foregroundColor: Colors.blue,
-                          backgroundColor: Colors.transparent,
-                          child: Icon(
-                            Icons.scale_rounded,
-                            size: 30,
-                          ),
-                        ),
-                        const SizedBox(width: 5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              'BMI Calculator',
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Color(0xFF0F163B),
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Text(
-                              'Be Fit - Be Healthy',
-                              style: TextStyle(
-                                color: Color(0xFF0F163B),
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ],
-                ),
+                const BmiBrand(),
                 IconButton(
                   onPressed: () {
                     CalculatorBrain calc = CalculatorBrain(
@@ -168,9 +131,9 @@ class _InputPageState extends State<InputPage> {
                   },
                   colour: selectedGender == Gender.male
                       ? kActiveCardColor
-                      : kInactiveCardColor,
+                      : kInActiveCardColor,
                   cardChild: IconContent(
-                    iconColor: const Color(0xFFFF9356),
+                    iconColor: maleGender,
                     icon: FontAwesomeIcons.mars,
                     label: AppLocalizations.of(context)!.male,
                   ),
@@ -185,9 +148,9 @@ class _InputPageState extends State<InputPage> {
                   },
                   colour: selectedGender == Gender.female
                       ? kActiveCardColor
-                      : kInactiveCardColor,
+                      : kInActiveCardColor,
                   cardChild: IconContent(
-                    iconColor: const Color(0xFFD73972),
+                    iconColor: femaleGender,
                     icon: FontAwesomeIcons.venus,
                     label: AppLocalizations.of(context)!.female,
                   ),
@@ -205,10 +168,7 @@ class _InputPageState extends State<InputPage> {
                     AppLocalizations.of(context)!.height,
                     style: kLabelTextStyle,
                   ),
-                  const Divider(
-                    height: 1.0,
-                    color: Color.fromRGBO(143, 144, 156, 0.22),
-                  ),
+                  const DividerWidget(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.baseline,
@@ -226,10 +186,9 @@ class _InputPageState extends State<InputPage> {
                   ),
                   SliderTheme(
                     data: SliderTheme.of(context).copyWith(
-                      inactiveTrackColor: const Color(0xFF8D8E98),
+                      inactiveTrackColor: kInActiveCardColor,
                       activeTrackColor: mainBlue,
-                      thumbColor: const Color(0xFFEB1555),
-                      overlayColor: const Color(0x29EB1555),
+                      thumbColor: thumbColor,
                       thumbShape:
                           const RoundSliderThumbShape(enabledThumbRadius: 15.0),
                       overlayShape:
@@ -237,8 +196,8 @@ class _InputPageState extends State<InputPage> {
                     ),
                     child: Slider(
                       value: height.toDouble(),
-                      min: 120.0,
-                      max: 220.0,
+                      min: 110.0,
+                      max: 230.0,
                       onChanged: (double newValue) {
                         setState(() {
                           height = newValue.round();
@@ -272,10 +231,7 @@ class _InputPageState extends State<InputPage> {
                           AppLocalizations.of(context)!.age,
                           style: kLabelTextStyle,
                         ),
-                        const Divider(
-                          height: 1.0,
-                          color: Color.fromRGBO(143, 144, 156, 0.22),
-                        ),
+                        const DividerWidget(),
                         Text(
                           age.toString(),
                           style: kNumberTextStyle,

@@ -1,45 +1,80 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-const kBottomContainerHeight = 65.0;
 final kActiveCardColor = Colors.grey.shade100;
-final kInactiveCardColor = Colors.grey.shade400;
+final kInActiveCardColor = Colors.grey.shade400;
+final drawerBlur = Colors.grey.shade200;
+final boxShadow1 = Colors.grey.shade600;
+final defaultBackgroundColor = Colors.grey.shade200;
+
+const boxShadow2 = Colors.white;
 const textColorDarkBlue = Color(0xFF0F163B);
 const mainBlue = Color(0xFF4E7AF3);
-//const kBottomContainerColour = Color(0xFFEB1555);
+const maleGender = Color(0xFFFF9356);
+const femaleGender = Color(0xFFD73972);
+const dividerColor = Color.fromRGBO(143, 144, 156, 0.22);
+const thumbColor = Color(0xFFEB1555);
+const weightCardBackColor = Color.fromRGBO(244, 244, 244, 1.0);
 
-const kLabelTextStyle = TextStyle(
-  fontSize: 18.0,
-  color: Color(0xFF0F163B),
+final BorderRadiusGeometry kBorderRadius = BorderRadius.circular(20.0.r);
+
+const kBottomContainerHeight = 65.0;
+
+final kLabelTextStyle = TextStyle(
+  fontSize: 18.0.sp,
+  color: textColorDarkBlue,
   fontWeight: FontWeight.w600,
 );
 
-const kNumberTextStyle = TextStyle(
-  fontSize: 50.0,
+final kNumberTextStyle = TextStyle(
+  fontSize: 50.0.sp,
   fontWeight: FontWeight.w900,
 );
 
-const kLargeButtonTextStyle = TextStyle(
+final kLargeButtonTextStyle = TextStyle(
   color: Colors.white,
-  fontSize: 25.0,
+  fontSize: 25.0.sp,
   fontWeight: FontWeight.bold,
 );
 
-const kTitleTextStyle = TextStyle(
-  fontSize: 40.0,
+final kTitleTextStyle = TextStyle(
+  fontSize: 40.0.sp,
   fontWeight: FontWeight.bold,
 );
 
-const kResultTextStyle = TextStyle(
-  color: Color(0xFF0F163B),
-  fontSize: 32.0,
+final kResultTextStyle = TextStyle(
+  color: textColorDarkBlue,
+  fontSize: 32.0.sp,
   fontWeight: FontWeight.bold,
 );
 
-const kBMITextStyle = TextStyle(
-  fontSize: 100.0,
+final kBMITextStyle = TextStyle(
+  fontSize: 100.0.sp,
   fontWeight: FontWeight.bold,
 );
 
-const kBodyTextStyle = TextStyle(
-  fontSize: 22.0,
+final kBodyTextStyle = TextStyle(
+  fontSize: 22.0.sp,
+  color: textColorDarkBlue,
+);
+
+final bmiCalcStyle1 = TextStyle(
+  fontSize: 20.0.sp,
+  color: textColorDarkBlue,
+  fontWeight: FontWeight.w600,
+);
+final bmiCalcStyle2 = TextStyle(
+  fontSize: 14.0.sp,
+  color: textColorDarkBlue,
+  fontWeight: FontWeight.w600,
+);
+final expansionCardTitle = TextStyle(
+  color: textColorDarkBlue,
+  fontSize: 20.sp,
+  fontWeight: FontWeight.w600,
+);
+final expansionCardSubt = TextStyle(
+  color: textColorDarkBlue,
+  fontSize: 16.sp,
+  fontWeight: FontWeight.w400,
 );

@@ -26,7 +26,6 @@ class ResultsPage extends StatelessWidget {
           Expanded(
             child: Container(
               padding: const EdgeInsets.all(15.0),
-              margin: EdgeInsets.only(top: 20.0),
               alignment: Alignment.bottomLeft,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -35,14 +34,14 @@ class ResultsPage extends StatelessWidget {
                     AppLocalizations.of(context)!.yourResult,
                     style: kTitleTextStyle,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10.0,
                   ),
                   IconButton(
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    icon: Icon(
+                    icon: const Icon(
                       FontAwesomeIcons.calculator,
                     ),
                   ),
@@ -79,11 +78,7 @@ class ResultsPage extends StatelessWidget {
                   Text(
                     interpretation,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Color(0xFF0F163B),
-                      fontSize: 22.0,
-                      fontWeight: FontWeight.w500,
-                    ),
+                    style: kBodyTextStyle,
                   ),
                 ],
               ),

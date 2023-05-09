@@ -16,18 +16,12 @@ class BottomButton extends StatelessWidget {
       onTap: onTap,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 500),
-        child: Center(
-          child: Text(
-            buttonTitle,
-            style: kLargeButtonTextStyle,
-          ),
-        ),
         margin: const EdgeInsets.all(10),
         width: double.infinity,
         height: kBottomContainerHeight,
         decoration: BoxDecoration(
           color: mainBlue,
-          borderRadius: BorderRadius.circular(20.0),
+          borderRadius: kBorderRadius,
           boxShadow: _isElevated
               ? [
                   BoxShadow(
@@ -44,6 +38,12 @@ class BottomButton extends StatelessWidget {
                   ),
                 ]
               : null,
+        ),
+        child: Center(
+          child: Text(
+            buttonTitle,
+            style: kLargeButtonTextStyle,
+          ),
         ),
       ),
     );
