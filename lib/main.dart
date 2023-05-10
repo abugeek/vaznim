@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vaznim/data/constants.dart';
 
-import './screens/drawerScreen.dart';
-import './screens/input_page.dart';
+import 'src/screens/drawer_page.dart';
+import 'src/screens/input_page.dart';
 
-void main() => runApp(HomePage());
+void main(List<String> args) {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]).then((value) => runApp(HomePage()));
+}
 
 class HomePage extends StatefulWidget {
   @override
@@ -22,20 +30,27 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      locale: _locale,
-      debugShowCheckedModeBanner: false,
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: AppLocalizations.supportedLocales,
-      home: Scaffold(
-        backgroundColor: Colors.grey.shade300,
-        body: Stack(
-          children: [
-            DrawerScreen(setLocale),
-            InputPage(setLocale),
-          ],
-        ),
-      ),
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      splitScreenMode: true,
+      minTextAdapt: true,
+      builder: (context, child) {
+        return MaterialApp(
+          locale: _locale,
+          debugShowCheckedModeBanner: false,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: Scaffold(
+            backgroundColor: defaultBackgroundColor,
+            body: Stack(
+              children: [
+                DrawerScreen(setLocale),
+                InputPage(setLocale),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 }
