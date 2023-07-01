@@ -10,10 +10,6 @@
 
 This is a simple BMI (Body Mass Index) calculator app that allows users to calculate their BMI and get an idea of their overall health status. The app takes input from the user's weight and height, and then calculates their BMI based on a standard formula. The result is displayed along with a simple message that lets the user know whether their BMI is underweight, normal, overweight, or obese.
 
-The app is built using [Programming Language/Tools Used], and is designed to be simple and easy to use. It's a great tool for anyone who wants to get a quick idea of their health status, and can be used on the go or at home.
-
-Feel free to use this as a starting point and modify it to fit your specific app and programming language. The most important thing is to give users a clear understanding of what your app does and how it can help them.
-
 ## Preview:
 
 <img src="https://github.com/abugeek/vaznim/assets/132854490/73c0a396-3782-4109-ae00-5f37825d3006"
